@@ -282,7 +282,7 @@
 				DEVELOPMENT_TEAM = Q7WPDQ326P;
 				INFOPLIST_FILE = ARSceneKitTutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Dover-Inc.ARSceneKitTutorial";
+				PRODUCT_BUNDLE_IDENTIFIER = com.soluis.ARSceneKitTutorial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "4c393aa5-c7d9-4632-b770-25a10542980f";
 				PROVISIONING_PROFILE_SPECIFIER = Sol_Wildcard_EnterpriseDevelopment;
@@ -300,7 +300,7 @@
 				DEVELOPMENT_TEAM = Q7WPDQ326P;
 				INFOPLIST_FILE = ARSceneKitTutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Dover-Inc.ARSceneKitTutorial";
+				PRODUCT_BUNDLE_IDENTIFIER = com.soluis.ARSceneKitTutorial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "38651d75-3a0d-4446-99ef-10821d534a6c";
 				PROVISIONING_PROFILE_SPECIFIER = Sol_Wildcard_EnterpriseDistribution;
