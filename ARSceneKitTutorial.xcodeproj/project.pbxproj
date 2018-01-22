@@ -99,7 +99,7 @@
 				TargetAttributes = {
 					B5CD16C920160E0F00F6C8A3 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -278,12 +278,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V62CNVX8A8;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = Q7WPDQ326P;
 				INFOPLIST_FILE = ARSceneKitTutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Dover-Inc.ARSceneKitTutorial";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4c393aa5-c7d9-4632-b770-25a10542980f";
+				PROVISIONING_PROFILE_SPECIFIER = Sol_Wildcard_EnterpriseDevelopment;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -293,12 +295,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V62CNVX8A8;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = Q7WPDQ326P;
 				INFOPLIST_FILE = ARSceneKitTutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Dover-Inc.ARSceneKitTutorial";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "38651d75-3a0d-4446-99ef-10821d534a6c";
+				PROVISIONING_PROFILE_SPECIFIER = Sol_Wildcard_EnterpriseDistribution;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
