@@ -15,7 +15,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var sceneView: ARSCNView!
     
     var nodeModel:SCNNode!
-    let nodeName = "cherub"
+    let nodeName = "BeanBag"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.scene = scene
         
         //load custom scene model
-        let modelScene = SCNScene(named: "art.scnassets/cherub.dae")!
+        let modelScene = SCNScene(named: "art.scnassets/BeanBag.scn")!
         
         nodeModel = modelScene.rootNode.childNode(withName: nodeName, recursively: true)
     }
@@ -84,7 +84,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         //hit test for feature points
         let hitResultsFeaturePoints: [ARHitTestResult] = sceneView.hitTest(location, types: .featurePoint)
         if let hit = hitResultsFeaturePoints.first {
-            sceneView.session.add(anchor: ARAnchor(transform: hit.worldTransform))
+            //Get a transform matrix with the eular angles of the (physical) camera
+            let rotate = simd_float4x4(SCNMatrix4MakeRotation(sceneView.session.currentFrame!.camera.eulerAngles.y, 0, 1, 0))
+            
+            //Combine both transform matrices
+            let finalTransform = simd_mul(hit.worldTransform, rotate)
+            
+            sceneView.session.add(anchor: ARAnchor(transform: finalTransform))
         }
     }
     
